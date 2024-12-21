@@ -1,0 +1,173 @@
+/* Google Fonts font-family: "Poppins", sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Danfo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Css Reset */
+*{
+    margin:0;
+    padding: 0;
+   box-sizing: border-box;
+}
+body{
+    /* Html kisminda en kapsayici etiket bodydir bundan dolayi
+    tum elemanlara sahip olmasi istenen css ozellikleri bodye verilir. */
+     font-family:"Poppins", sans-serif ; 
+}
+
+.banner{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) , url(./images/banner.png);  
+    /* linear-gradient ==> Kapsayicinin arka planinda renk gecisi elde etmek icin
+    kullanilir. Bu ozellik sayesinde buradaki banner kapsayicisinin arka planina
+    renk gecisi verdik.  */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+
+/*  Header */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 2% 6%
+}
+.header img{
+    width: 50px;
+    border-radius: 50%;
+}
+.nav-Link{
+    flex: 1; 
+    text-align: right;
+}
+.nav-Link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+}
+.nav-Link ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: all 0.5s;
+    /* Bu ozellik hover olma durumunda degisen css ozelliklerini yavaslatarak daha guzel
+    bir gorunum  elde etmek icin kullanilir. */
+}
+.nav-Link ul li:hover::after{
+    width: 100%;
+}
+
+.nav-Link ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+/* Text Box */
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: #fff;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+.hero-button{
+    display: inline-block;
+    padding: 12px 34px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.hero-button:hover{
+    background-color: #f44336;
+    border: 1px solid #f44336;
+}
+#close-icon,#menu-icon{
+    display: none;
+}
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.course p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+.course-col{
+    background-color: #fff3f3;
+    flex-basis: 31%;
+    margin: 5%;
+    padding: 20px 12px;
+    transition: all 0.4s;
+    border-radius: 10px;
+}
+.course-col h3{
+    font-weight: 600;
+    margin: 10px 0;
+    
+}
+.course-col:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2 );
+    /* box-shadow elemanlarin arkasinda golge efekti vermek icin 
+    kullanilir. */
+}
+/*  Campus */
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+    
+}
+.layer{
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
